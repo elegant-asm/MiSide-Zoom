@@ -56,11 +56,13 @@ public class Plugin : BasePlugin
             }
 			if (Input.GetKeyDown(KeyCode.Mouse1)) {
 				zooming = true;
-                __instance.CameraAnimationFOV(zoom);
+                //__instance.CameraAnimationFOV(zoom);
+                __instance.CameraFOVSharply(zoom);
             }
             if (!Input.GetKey(KeyCode.LeftAlt) && !Input.GetKey(KeyCode.Mouse1) && zooming) {
-				zooming = false;
-                __instance.CameraFOVLerpReset();
+                zooming = false;
+                //__instance.CameraFOVLerpReset();
+                __instance.CameraFOVSharplyReset();
             }
 		}
 	}
